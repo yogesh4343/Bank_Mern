@@ -123,7 +123,7 @@ export function UserDetailReducerTwo(inputs){
             try{
     
                 
-                const {data} = await axios.post(`/api/enterUser`, inputs , config)
+                const {data} = await axios.post(`http://localhost:4000/api/enterUser`, inputs , config)
                 // console.log("data" , data );
                 dispatch(
                     getStatus(STATUS.IDLE),
@@ -151,7 +151,7 @@ export function UserDetailReducerTwo(inputs){
             try{
     
                 
-                const {data} = await axios.get(`/api/users`);;
+                const {data} = await axios.get(`http://localhost:4000/api/users`);;
                 // console.log(data);
                 dispatch(
                     getStatus(STATUS.IDLE),
@@ -179,7 +179,7 @@ export function UserDetailReducerTwo(inputs){
             try{
     
                 
-                const {data} = await axios.get(`/api/singleUserDetail/${id}`);;
+                const {data} = await axios.get(`http://localhost:4000/api/singleUserDetail/${id}`);;
                 // console.log(data);
                 dispatch(
                     getStatus(STATUS.IDLE),
@@ -210,7 +210,7 @@ export function UserDetailReducerTwo(inputs){
             try{
     
                 
-                const {data} = await axios.put(`/api/transfer` , obj);;
+                const {data} = await axios.put(`http://localhost:4000/api/transfer` , obj);;
                 // console.log(data);
                 dispatch(
                     getStatus(STATUS.IDLE),
@@ -239,7 +239,7 @@ export function UserDetailReducerTwo(inputs){
             try{
     
                 
-                const {data} = await axios.post(`/api/transaction` , obj);;
+                const {data} = await axios.post(`http://localhost:4000/api/transaction` , obj);;
                 // console.log(data);
                 dispatch(
                     getStatus(STATUS.IDLE),
@@ -267,7 +267,7 @@ export function UserDetailReducerTwo(inputs){
             try{
     
                 
-                const {data} = await axios.get(`/api/transactionAll`);;
+                const {data} = await axios.get(`http://localhost:4000/api/transactionAll`);;
                 // console.log(data);
                 dispatch(
                     getStatus(STATUS.IDLE),

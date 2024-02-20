@@ -1,5 +1,6 @@
 const cookieParser = require('cookie-parser');
 const express = require('express');
+const cors = require("cors");
 const mongoose = require('mongoose');
 const app = express();
 const userRoutes = require("./Routes/userRoutes");
@@ -7,6 +8,8 @@ const userDetailRoutes = require("./Routes/userDetailRoutes");
 const customerMoneyRoutes = require("./Routes/customerMoneyRoutes");
 const dotenv = require('dotenv');
 
+
+app.use(cors({ origin: true, credentials: true }));
 
 dotenv.config();            // for connecting .envv
 app.use(express.json());

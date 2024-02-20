@@ -57,7 +57,7 @@ export const {getStatus , getUserDetail , getUserLogin ,getUserLogout   } = User
             try{
     
                 
-                const {data} = await axios.post(`/api/register`, inputs , config)
+                const {data} = await axios.post(`http://localhost:4000/api/register`, inputs , config)
                 // console.log(data);
                 dispatch(
                     getStatus(STATUS.IDLE),
@@ -83,7 +83,7 @@ export function LoginReducer(inputs){
         try{
 
             
-            const {data} = await axios.post(`/api/login`, inputs , config)
+            const {data} = await axios.post(`http://localhost:4000/api/login`, inputs , config)
             // console.log(data);
             dispatch(
                 getStatus(STATUS.IDLE),
@@ -112,7 +112,7 @@ export function LogoutReducer(){
         try{
 
             
-            const {data} = await axios.post(`/api/logout`)
+            const {data} = await axios.post(`http://localhost:4000/api/logout`)
             // console.log(data);
             dispatch(
                 getStatus(STATUS.IDLE),
